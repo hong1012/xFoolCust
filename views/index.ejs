@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to 6666  <%= title %></p>
-  </body>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel='stylesheet' href='/stylesheets/index.css'/>
+</head>
+<body>
+    <% include nav %>
+
+
+    <div class="btn" id="btntest" >测试按钮</div>
+
+
+
+
+    <script src="/javascripts/lib/sea.js"></script>
+    <script src="/javascripts/lib/jquery2.1.1.js"></script>
+    <script src="/javascripts/lib/underscore.js"></script>
+
+    <script>
+        var versionId='2016-11-03';
+        seajs.config({
+            debug: true,
+            alias: {
+                'jquery': 'lib/jquery2.1.1',
+                'underscore': 'lib/underscore'
+            },
+            map: [
+                ['.css', '.css?v=' + versionId],
+                ['.js', '.js?v=' + versionId],
+                [ /^(.*\/app\/xxx\/.*\.(?:css|js))(?:.*)$/i, '$1?' + versionId ]
+            ]
+        });
+        seajs.use(['/javascripts/views/index.js'], function (init) {
+        });
+
+    </script>
+
+
+
+</body>
 </html>
