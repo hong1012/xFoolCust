@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<% include nav %>
+
+<form  method="get"  action="subform/">
+    用户名：<input type="text" id="txtUserName" name="txtUserName" />
+    密码：<input type="password" id="txtUserPwd" name="txtUserPwd" />
+    <input type="submit" value="get提交">
+</form>
+
+<br>
+<br>
+<br>
+<br>
+
+<form method="post" action="subform/login">
+    用户名：<input type="text" id="txtUserName" name="txtUserName" />
+    密码：<input type="password" id="txtUserPwd" name="txtUserPwd" />
+    <input type="submit" value="post提交">
+</form>
+
+<br>
+<br>
+<br>
+
+</body>
+</html>
