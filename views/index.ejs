@@ -9,6 +9,17 @@
     <% include nav %>
 
 
+    <%= title %>
+    <br>
+    <%- title %>
+
+    <ul>
+        <% for(var i  in  users){ %>
+         <li><%= users[i].username  %></li>
+        <%}%>
+    </ul>
+
+
     <div class="btn" id="btntest" >测试按钮</div>
 
 
